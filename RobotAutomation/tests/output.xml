@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-11T18:16:47.386244" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\USER\PycharmProjects\RobotAutomation\tests\test.robot">
+<test id="s1-t1" name="Validate login Function" line="8">
+<kw name="Start Browser" owner="hooks" type="SETUP">
+<msg time="2026-02-11T18:16:50.372578" level="INFO">Opening browser 'chrome' to base url 'https://robotsparebinindustries.com/'.</msg>
+<status status="PASS" start="2026-02-11T18:16:50.371502" elapsed="8.133925"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-02-11T18:16:58.606712" level="INFO">Page title is 'RobotSpareBin Industries Inc. - Intranet'.</msg>
+<arg>RobotSpareBin Industries Inc. - Intranet</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-02-11T18:16:58.511553" elapsed="0.095483"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-11T18:16:58.607850" elapsed="0.749462"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-11T18:16:59.358275" level="INFO">Typing text 'maria' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>maria</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T18:16:59.357840" elapsed="0.408853"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-11T18:16:59.767768" level="INFO">Typing text 'thoushallnotpass' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>thoushallnotpass</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T18:16:59.767315" elapsed="0.162746"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-11T18:16:59.931129" level="INFO">Clicking element 'xpath://button[text()='Log in']'.</msg>
+<arg>xpath://button[text()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T18:16:59.930661" elapsed="0.167470"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=logout</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-11T18:17:00.098971" elapsed="1.085874"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2026-02-11T18:17:01.357478" level="INFO">Current page contains element 'id=logout'.</msg>
+<arg>id=logout</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2026-02-11T18:17:01.185328" elapsed="0.172327"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-11T18:17:01.673562" level="INFO">Clicking button 'id=logout'.</msg>
+<arg>id=logout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-11T18:17:01.672923" elapsed="0.731966"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-11T18:17:12.409332" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-11T18:17:02.407449" elapsed="10.002153"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-11T18:17:12.410466" elapsed="2.957832"/>
+</kw>
+<kw name="Stop Browser" owner="hooks" type="TEARDOWN">
+<status status="PASS" start="2026-02-11T18:17:15.369025" elapsed="0.000311"/>
+</kw>
+<status status="PASS" start="2026-02-11T18:16:50.368587" elapsed="25.001019"/>
+</test>
+<status status="PASS" start="2026-02-11T18:16:47.414713" elapsed="27.956130"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
