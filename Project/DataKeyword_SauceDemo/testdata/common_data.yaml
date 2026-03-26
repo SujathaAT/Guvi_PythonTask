@@ -1,0 +1,34 @@
+url: "https://www.saucedemo.com"
+
+test_users:
+  - username: "standard_user"
+    password: "secret_sauce"
+    type: "valid"
+  - username: "locked_out_user"
+    password: "secret_sauce"
+    type: "invalid"
+  - username: "problem_user"
+    password: "secret_sauce"
+    type: "valid"
+  - username: "performance_glitch_user"
+    password: "secret_sauce"
+    type: "valid"
+
+invalid_credentials:
+  - username: "fake_user"
+    password: "wrong_password"
+
+verify_credentials:
+  - username: "standard_user"
+    password: "secret_sauce"
+
+checkout_data:
+  first_name: "John"
+  last_name: "Doe"
+  zip_code: "12345"
+
+sorting_test_data:
+  - option: "Name (Z to A)"
+    type: "alphabetical_desc"
+  - option: "Price (low to high)"
+    type: "price_asc"
