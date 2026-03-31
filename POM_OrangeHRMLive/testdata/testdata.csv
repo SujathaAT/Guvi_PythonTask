@@ -1,0 +1,4 @@
+Test_id,Tester_Name,Date,Detail,Username,Password,Result
+TC_001,Admin,08-03-2026,Valid login,Admin,admin123,<Result>
+TC_002,Manager,09-03-2026,Invalid login,manager@guvi.in,password@123,<Result>
+TC_003,Tester,10-03-2026,Invalid login,suman@guvi.in,password@123,<Result>
