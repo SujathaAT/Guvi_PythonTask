@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b65370d8-8d54-4c10-9058-b900becd4092" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="3BKwWCWPgz6oh4jnZh2DEH07JRO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python tests.Python tests for tests.test_saucedemo.TestSauceDemo.test_tc1_predefined_user_login.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc10_reset_state.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc1_login_scenarios.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc1_predefined_user_login.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc2_invalid_credentials.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc3_logout_validation.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc4_cart_icon_visibility.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc5_random_product_selection.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc6_tc7_tc8_cart_and_checkout.executor": "Run",
+    "Python tests.Python tests for tests.test_saucedemo.test_tc9_sorting.executor": "Run",
+    "Python tests.Python tests in test_saucedemo.py.executor": "Run",
+    "Python.basepage.executor": "Debug",
+    "Python.conftest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\PycharmProjects\DataKeyword_SauceDemo" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Python tests for tests.test_saucedemo.test_tc10_reset_state" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="DataKeyword_SauceDemo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_saucedemo.test_tc10_reset_state&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_saucedemo.test_tc4_cart_icon_visibility" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="DataKeyword_SauceDemo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_saucedemo.test_tc4_cart_icon_visibility&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_saucedemo.test_tc5_random_product_selection" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="DataKeyword_SauceDemo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_saucedemo.test_tc5_random_product_selection&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_saucedemo.test_tc6_tc7_tc8_cart_and_checkout" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="DataKeyword_SauceDemo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_saucedemo.test_tc6_tc7_tc8_cart_and_checkout&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_saucedemo.test_tc9_sorting" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="DataKeyword_SauceDemo" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_saucedemo.test_tc9_sorting&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for tests.test_saucedemo.test_tc10_reset_state" />
+        <item itemvalue="Python tests.Python tests for tests.test_saucedemo.test_tc9_sorting" />
+        <item itemvalue="Python tests.Python tests for tests.test_saucedemo.test_tc6_tc7_tc8_cart_and_checkout" />
+        <item itemvalue="Python tests.Python tests for tests.test_saucedemo.test_tc5_random_product_selection" />
+        <item itemvalue="Python tests.Python tests for tests.test_saucedemo.test_tc4_cart_icon_visibility" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-164cda30dcd9-0af03a5fa574-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.26830.99" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b65370d8-8d54-4c10-9058-b900becd4092" name="Changes" comment="" />
+      <created>1774251099588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774251099588</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="robotcode-line">
+          <url>file://$PROJECT_DIR$/conftest.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/keywords/workflow.py</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
