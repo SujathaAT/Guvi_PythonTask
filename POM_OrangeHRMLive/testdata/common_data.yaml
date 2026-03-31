@@ -1,0 +1,9 @@
+user:
+  username: Admin
+  password: admin123
+  new_user: Admin_Test123
+  new_pwd: Admin@123
+  emp_name: "a"
+  event_ind: 1
+  curr_index: 1
+  remarks: "Medical Reimbursement"
