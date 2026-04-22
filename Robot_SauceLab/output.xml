@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-04-22T20:26:02.287876" rpa="false" schemaversion="5">
+<suite id="s1" name="TC4" source="C:\Users\USER\PycharmProjects\Robot_SauceLab\tests\TC4.robot">
+<test id="s1-t1" name="Add Multiple Products And Validate Checkout Summary" line="18">
+<kw name="Open Application" owner="common" type="SETUP">
+<kw name="Start Browser" owner="Selenium_Wrapper">
+<arg>Chrome</arg>
+<arg>${url}</arg>
+<status status="PASS" start="2026-04-22T20:26:03.100337" elapsed="6.174013"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:03.097079" elapsed="6.177734"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2026-04-22T20:26:09.276672" level="INFO">${flag} = POSITIVE</msg>
+<arg>${flag}</arg>
+<arg>POSITIVE</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2026-04-22T20:26:09.275616" elapsed="0.001185"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="LoginSteps">
+<kw name="Enter User Credentials" owner="login_page">
+<if>
+<branch type="IF" condition="'${flag}' == 'POSITIVE'">
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:09.695603" level="INFO">Entered Value in usernameValue:standard_user</msg>
+<arg>id</arg>
+<arg>user-name</arg>
+<arg>${userid}</arg>
+<arg>username</arg>
+<status status="PASS" start="2026-04-22T20:26:09.279704" elapsed="0.416130"/>
+</kw>
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:09.851037" level="INFO">Entered Value in passwordValue:secret_sauce</msg>
+<arg>id</arg>
+<arg>password</arg>
+<arg>${pwd}</arg>
+<arg>password</arg>
+<status status="PASS" start="2026-04-22T20:26:09.696275" elapsed="0.155022"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:09.279089" elapsed="0.572408"/>
+</branch>
+<branch type="ELSE IF" condition="'${flag}' == 'NEGATIVE'">
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>user-name</arg>
+<arg>${invalid_userid}</arg>
+<arg>username</arg>
+<status status="NOT RUN" start="2026-04-22T20:26:09.852052" elapsed="0.000088"/>
+</kw>
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>password</arg>
+<arg>${invalid_pwd}</arg>
+<arg>password</arg>
+<status status="NOT RUN" start="2026-04-22T20:26:09.852468" elapsed="0.000086"/>
+</kw>
+<status status="NOT RUN" start="2026-04-22T20:26:09.851688" elapsed="0.001015"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Invalid flag provided: ${flag}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-04-22T20:26:09.853124" elapsed="0.000078"/>
+</kw>
+<status status="NOT RUN" start="2026-04-22T20:26:09.852829" elapsed="0.000498"/>
+</branch>
+<status status="PASS" start="2026-04-22T20:26:09.279017" elapsed="0.574415"/>
+</if>
+<status status="PASS" start="2026-04-22T20:26:09.278505" elapsed="0.575140"/>
+</kw>
+<kw name="Click On Login Button" owner="login_page">
+<kw name="Click" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:10.345611" level="INFO">login button Is Clicked</msg>
+<arg>id</arg>
+<arg>login-button</arg>
+<arg>login button</arg>
+<status status="PASS" start="2026-04-22T20:26:09.854874" elapsed="0.490946"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:09.854044" elapsed="0.492029"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:09.277396" elapsed="1.068844"/>
+</kw>
+<kw name="Add Multiple Products" owner="inventory_page">
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-04-22T20:26:10.362753" level="INFO">${product_xpath} = xpath=//div[text()='Sauce Labs Backpack']/ancestor::div[@class='inventory_item']//button[text()='Add to cart]'</msg>
+<var>${product_xpath}</var>
+<arg>xpath=//div[text()='${product}']/ancestor::div[@class='inventory_item']//button[text()='Add to cart]'</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-04-22T20:26:10.361778" elapsed="0.001081"/>
+</kw>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>xpath</arg>
+<arg>${product_xpath}</arg>
+<arg>Add products to cart</arg>
+<status status="PASS" start="2026-04-22T20:26:10.363230" elapsed="0.080933"/>
+</kw>
+<var name="${product}">Sauce Labs Backpack</var>
+<status status="PASS" start="2026-04-22T20:26:10.361422" elapsed="0.082940"/>
+</iter>
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-04-22T20:26:10.446107" level="INFO">${product_xpath} = xpath=//div[text()='Sauce Labs Bike Light']/ancestor::div[@class='inventory_item']//button[text()='Add to cart]'</msg>
+<var>${product_xpath}</var>
+<arg>xpath=//div[text()='${product}']/ancestor::div[@class='inventory_item']//button[text()='Add to cart]'</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-04-22T20:26:10.445214" elapsed="0.000991"/>
+</kw>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>xpath</arg>
+<arg>${product_xpath}</arg>
+<arg>Add products to cart</arg>
+<status status="PASS" start="2026-04-22T20:26:10.446591" elapsed="0.045297"/>
+</kw>
+<var name="${product}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2026-04-22T20:26:10.444883" elapsed="0.047209"/>
+</iter>
+<var>${product}</var>
+<value>@{productnames}</value>
+<status status="PASS" start="2026-04-22T20:26:10.360870" elapsed="0.131397"/>
+</for>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>class</arg>
+<arg>shopping_cart_link</arg>
+<arg>Shopping Cart</arg>
+<status status="PASS" start="2026-04-22T20:26:10.492668" elapsed="0.000373"/>
+</kw>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>checkout</arg>
+<arg>Move to Checkout</arg>
+<status status="PASS" start="2026-04-22T20:26:10.493374" elapsed="0.032435"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:10.360115" elapsed="0.165967"/>
+</kw>
+<kw name="Fill Checkout Info" owner="inventory_page">
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:10.561695" level="INFO">'NoneType' object has no attribute 'send_keys'</msg>
+<msg time="2026-04-22T20:26:10.561815" level="INFO">Failed to Enter value inFirst Name</msg>
+<arg>id</arg>
+<arg>first-name</arg>
+<arg>Standard</arg>
+<arg>First Name</arg>
+<status status="PASS" start="2026-04-22T20:26:10.528160" elapsed="0.033818"/>
+</kw>
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:10.587082" level="INFO">'NoneType' object has no attribute 'send_keys'</msg>
+<msg time="2026-04-22T20:26:10.587185" level="INFO">Failed to Enter value inLast Name</msg>
+<arg>id</arg>
+<arg>last-name</arg>
+<arg>User</arg>
+<arg>Last Name</arg>
+<status status="PASS" start="2026-04-22T20:26:10.562532" elapsed="0.024795"/>
+</kw>
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:10.603460" level="INFO">'NoneType' object has no attribute 'send_keys'</msg>
+<msg time="2026-04-22T20:26:10.603575" level="INFO">Failed to Enter value inZip</msg>
+<arg>id</arg>
+<arg>postal-code</arg>
+<arg>211412</arg>
+<arg>Zip</arg>
+<status status="PASS" start="2026-04-22T20:26:10.587621" elapsed="0.016093"/>
+</kw>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>continue</arg>
+<arg>Click Continue</arg>
+<status status="PASS" start="2026-04-22T20:26:10.603993" elapsed="0.023215"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:10.527267" elapsed="0.100159"/>
+</kw>
+<kw name="Verify Items" owner="inventory_page">
+<for flavor="IN">
+<iter>
+<kw name="Find Element" owner="Selenium_Wrapper">
+<arg>xpath</arg>
+<arg>//div[@class='inventory_item_name' and text()='${product}']</arg>
+<status status="PASS" start="2026-04-22T20:26:10.628821" elapsed="0.030509"/>
+</kw>
+<var name="${product}">Sauce Labs Backpack</var>
+<status status="PASS" start="2026-04-22T20:26:10.628591" elapsed="0.030865"/>
+</iter>
+<iter>
+<kw name="Find Element" owner="Selenium_Wrapper">
+<arg>xpath</arg>
+<arg>//div[@class='inventory_item_name' and text()='${product}']</arg>
+<status status="PASS" start="2026-04-22T20:26:10.659859" elapsed="0.020615"/>
+</kw>
+<var name="${product}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2026-04-22T20:26:10.659670" elapsed="0.021608"/>
+</iter>
+<var>${product}</var>
+<value>@{productnames}</value>
+<status status="PASS" start="2026-04-22T20:26:10.628324" elapsed="0.053185"/>
+</for>
+<status status="PASS" start="2026-04-22T20:26:10.627960" elapsed="0.053845"/>
+</kw>
+<kw name="Check Quantity" owner="inventory_page">
+<kw name="Find Element" owner="Selenium_Wrapper">
+<arg>xpath</arg>
+<arg>//div[@class='cart_quantity' and text()='1']</arg>
+<status status="PASS" start="2026-04-22T20:26:10.683148" elapsed="0.059527"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:10.682470" elapsed="0.060473"/>
+</kw>
+<kw name="Verify Url" owner="Selenium_Wrapper">
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<status status="PASS" start="2026-04-22T20:26:10.744209" elapsed="0.023977"/>
+</kw>
+<kw name="Take Screenshot" owner="Selenium_Wrapper">
+<msg time="2026-04-22T20:26:11.050331" level="INFO" html="true">&lt;img src="C:\Users\USER\PycharmProjects\Robot_SauceLab\screenshots\Add Multiple Products and Checkout_1776869770.png" width="384px" &gt;</msg>
+<arg>Add Multiple Products and Checkout</arg>
+<status status="PASS" start="2026-04-22T20:26:10.768726" elapsed="0.281848"/>
+</kw>
+<kw name="Close Application" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="Selenium_Wrapper">
+<status status="PASS" start="2026-04-22T20:26:11.052446" elapsed="2.496576"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:11.051610" elapsed="2.497645"/>
+</kw>
+<status status="PASS" start="2026-04-22T20:26:03.094513" elapsed="10.455117"/>
+</test>
+<status status="PASS" start="2026-04-22T20:26:02.291429" elapsed="11.260495"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC4" id="s1" pass="1" fail="0" skip="0">TC4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

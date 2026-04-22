@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-13T20:47:54.173780" rpa="false" schemaversion="5">
+<suite id="s1" name="TC4" source="C:\Users\USER\PycharmProjects\Robot_SauceLab\tests\TC4.robot">
+<test id="s1-t1" name="Add Multiple Products And Validate Checkout Summary" line="18">
+<kw name="Open Application" owner="common" type="SETUP">
+<kw name="Start Browser" owner="Selenium_Wrapper">
+<arg>Chrome</arg>
+<arg>${url}</arg>
+<status status="PASS" start="2026-02-13T20:47:55.374449" elapsed="5.289207"/>
+</kw>
+<status status="PASS" start="2026-02-13T20:47:55.372297" elapsed="5.291729"/>
+</kw>
+<kw name="Login With Valid Credentials" owner="LoginSteps">
+<kw name="Enter User Credentials" owner="login_page">
+<if>
+<branch type="IF" condition="'${flag}' == 'POSITIVE'">
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-02-13T20:48:01.021212" level="INFO">Entered Value in usernameValue:standard_user</msg>
+<arg>id</arg>
+<arg>user-name</arg>
+<arg>${userid}</arg>
+<arg>username</arg>
+<status status="PASS" start="2026-02-13T20:48:00.667662" elapsed="0.353785"/>
+</kw>
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<msg time="2026-02-13T20:48:01.174665" level="INFO">Entered Value in passwordValue:secret_sauce</msg>
+<arg>id</arg>
+<arg>password</arg>
+<arg>${pwd}</arg>
+<arg>password</arg>
+<status status="PASS" start="2026-02-13T20:48:01.021828" elapsed="0.153056"/>
+</kw>
+<status status="PASS" start="2026-02-13T20:48:00.666957" elapsed="0.508121"/>
+</branch>
+<branch type="ELSE IF" condition="'${flag}' == 'NEGATIVE'">
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>user-name</arg>
+<arg>${invalid_userid}</arg>
+<arg>username</arg>
+<status status="NOT RUN" start="2026-02-13T20:48:01.175599" elapsed="0.000093"/>
+</kw>
+<kw name="Enter Text" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>password</arg>
+<arg>${invalid_pwd}</arg>
+<arg>password</arg>
+<status status="NOT RUN" start="2026-02-13T20:48:01.176010" elapsed="0.000081"/>
+</kw>
+<status status="NOT RUN" start="2026-02-13T20:48:01.175243" elapsed="0.000999"/>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Invalid flag provided: ${flag}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-13T20:48:01.176644" elapsed="0.000081"/>
+</kw>
+<status status="NOT RUN" start="2026-02-13T20:48:01.176368" elapsed="0.000492"/>
+</branch>
+<status status="PASS" start="2026-02-13T20:48:00.666848" elapsed="0.510123"/>
+</if>
+<status status="PASS" start="2026-02-13T20:48:00.666328" elapsed="0.510815"/>
+</kw>
+<kw name="Click On Login Button" owner="login_page">
+<kw name="Click" owner="Selenium_Wrapper">
+<msg time="2026-02-13T20:48:01.457834" level="INFO">login button Is Clicked</msg>
+<arg>id</arg>
+<arg>login-button</arg>
+<arg>login button</arg>
+<status status="PASS" start="2026-02-13T20:48:01.178112" elapsed="0.280057"/>
+</kw>
+<status status="PASS" start="2026-02-13T20:48:01.177517" elapsed="0.280936"/>
+</kw>
+<status status="PASS" start="2026-02-13T20:48:00.665042" elapsed="0.793625"/>
+</kw>
+<kw name="Find Element" owner="Selenium_Wrapper">
+<arg>class=inventory_list</arg>
+<arg>timeout=10s</arg>
+<status status="PASS" start="2026-02-13T20:48:01.468080" elapsed="0.000862"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-13T20:48:01.487698" level="INFO">${product_xpath} = //div[text()='Sauce Labs Backpack']/ancestor::div[@class='inventory_item']//button[text()='Add to cart']</msg>
+<var>${product_xpath}</var>
+<arg>//div[text()='${product}']/ancestor::div[@class='inventory_item']//button[text()='Add to cart']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-13T20:48:01.486627" elapsed="0.001184"/>
+</kw>
+<kw name="Click" owner="Selenium_Wrapper">
+<msg time="2026-02-13T20:48:01.683631" level="INFO">Add products to cart Is Clicked</msg>
+<arg>xpath</arg>
+<arg>${product_xpath}</arg>
+<arg>Add products to cart</arg>
+<status status="PASS" start="2026-02-13T20:48:01.488280" elapsed="0.195919"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2026-02-13T20:48:01.690754" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-02-13T20:48:01.691141" level="FAIL">No browser is open.</msg>
+<arg>${product_xpath}</arg>
+<arg>timeout=7s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2026-02-13T20:48:01.684748" elapsed="0.023115">No browser is open.</status>
+</kw>
+<var name="${product}">Sauce Labs Backpack</var>
+<status status="FAIL" start="2026-02-13T20:48:01.486211" elapsed="0.223120">No browser is open.</status>
+</iter>
+<var>${product}</var>
+<value>@{productnames}</value>
+<status status="FAIL" start="2026-02-13T20:48:01.485476" elapsed="0.224501">No browser is open.</status>
+</for>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>class</arg>
+<arg>shopping_cart_link</arg>
+<arg>Cart</arg>
+<status status="NOT RUN" start="2026-02-13T20:48:01.710698" elapsed="0.000141"/>
+</kw>
+<kw name="Click" owner="Selenium_Wrapper">
+<arg>id</arg>
+<arg>checkout</arg>
+<arg>Move to Checkout</arg>
+<status status="NOT RUN" start="2026-02-13T20:48:01.712130" elapsed="0.000131"/>
+</kw>
+<kw name="Take Screenshot" owner="Selenium_Wrapper">
+<arg>Add Multiple Products and Checkout</arg>
+<status status="NOT RUN" start="2026-02-13T20:48:01.712980" elapsed="0.000151"/>
+</kw>
+<kw name="Close Application" owner="common" type="TEARDOWN">
+<kw name="Close Browser">
+<msg time="2026-02-13T20:48:01.715253" level="FAIL">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    SeleniumLibrary.Close Browser
+    Selenium_Wrapper.Close Browser</msg>
+<status status="FAIL" start="2026-02-13T20:48:01.715110" elapsed="0.000280">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    SeleniumLibrary.Close Browser
+    Selenium_Wrapper.Close Browser</status>
+</kw>
+<status status="FAIL" start="2026-02-13T20:48:01.714183" elapsed="0.001648">Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    SeleniumLibrary.Close Browser
+    Selenium_Wrapper.Close Browser</status>
+</kw>
+<status status="FAIL" start="2026-02-13T20:47:55.371094" elapsed="6.345232">No browser is open.
+
+Also teardown failed:
+Multiple keywords with name 'Close Browser' found. Give the full name of the keyword you want to use:
+    SeleniumLibrary.Close Browser
+    Selenium_Wrapper.Close Browser</status>
+</test>
+<status status="FAIL" start="2026-02-13T20:47:54.176524" elapsed="7.541635"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC4" id="s1" pass="0" fail="1" skip="0">TC4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
